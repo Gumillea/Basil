@@ -4,12 +4,9 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-group = mod_version
-version = mod_group_id
-
-base {
-    archivesName = mod_id
-}
+group = mod_group_id
+version = mod_version
+archivesBaseName = "${mod_id}-${minecraft_version}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -100,6 +97,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-1.19.2-forge:11.6.0.1015")
 
     implementation fg.deobf("curse.maven:farmers-delight-398521:4679318")
+
 }
 
 jar {

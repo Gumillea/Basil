@@ -8,7 +8,7 @@ displayName="Basil"
 logoFile="icon.png"
 authors="Gumillea"
 description='''
-An addon mod for Neapolitan, designed to enhance diet diversity and mod compatibility by adding new foods with unique effects from the End.
+Improves vanilla features simply.
 '''
 [[dependencies.basil]]
 modId="forge"

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "basil:fiddlehead"
+  },
+  "result": "basil:cooked_fiddlehead",
+  "experience": 0.35,
+  "cookingtime": 200
+}

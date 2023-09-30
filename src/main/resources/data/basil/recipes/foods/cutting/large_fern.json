@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cutting",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:large_fern"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "basil:fern_sporangia",
+      "count": 2
+    },
+    {
+      "item": "basil:fiddlehead"
+    },
+    {
+      "item": "basil:fiddlehead",
+      "chance": 0.5
+    }
+  ]
+}

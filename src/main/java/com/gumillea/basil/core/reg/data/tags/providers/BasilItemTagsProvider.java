@@ -17,7 +17,7 @@ public class BasilItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public void addTags() {
-        this.tag(BasilItemTags.CROP).add(
+        this.tag(BasilItemTags.CROPS).add(
                 BasilItems.FIDDLEHEAD.get()
         );
         this.tag(BasilItemTags.SALAD_INGREDIENTS).add(
@@ -25,6 +25,9 @@ public class BasilItemTagsProvider extends ItemTagsProvider {
         );
         this.tag(BasilItemTags.SPORANGIA).add(
                 BasilItems.FERN_SPORANGIA.get()
+        );
+        this.tag(BasilItemTags.VEGETABLES).add(
+                BasilItems.FIDDLEHEAD.get()
         );
 
         this.tag(BasilItemTags.BERRIES).add(
@@ -39,6 +42,13 @@ public class BasilItemTagsProvider extends ItemTagsProvider {
 
         this.tag(BasilItemTags.MILK).add(
                 Items.MILK_BUCKET
+        );
+
+        this.tag(BasilItemTags.DIET_VEGETABLES).add(
+                BasilItems.FIDDLEHEAD.get()
+        );
+        this.tag(BasilItemTags.DIET_FRUITS).add(
+                BasilItems.ARBUTUS_BERRIES.get()
         );
     }
 }

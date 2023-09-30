@@ -1,8 +1,11 @@
-// 1.19.2	2023-09-30T14:36:02.3718352	Tags for minecraft:item
-6b9cd41a978d9bb70a83991118e797dbcd28c3f1 data/forge/tags/items/berries.json
-3780e474910c40e6a03a04fb36e961acd0e1c16d data/forge/tags/items/crop.json
+// 1.19.2	2023-09-30T23:11:16.4302827	Tags for minecraft:item
+6b9cd41a978d9bb70a83991118e797dbcd28c3f1 data/diet/tags/items/fruits.json
+3780e474910c40e6a03a04fb36e961acd0e1c16d data/diet/tags/items/vegetables.json
+3780e474910c40e6a03a04fb36e961acd0e1c16d data/forge/tags/items/crops.json
+6b9cd41a978d9bb70a83991118e797dbcd28c3f1 data/forge/tags/items/fruits/berries.json
 edb5947f84984a39ab47c98c6fb0b3c3a9a8cc39 data/forge/tags/items/milk.json
 3780e474910c40e6a03a04fb36e961acd0e1c16d data/forge/tags/items/salad_ingredients.json
 3f2cd7a6726965173ed85ec3539a22d8600353be data/forge/tags/items/seeds/fern.json
+3780e474910c40e6a03a04fb36e961acd0e1c16d data/forge/tags/items/vegetables.json
 6b9cd41a978d9bb70a83991118e797dbcd28c3f1 data/minecraft/tags/items/fox_food.json
 113d798d44662ffe7fa82cb10517e71dce17c128 data/minecraft/tags/items/piglin_loved.json

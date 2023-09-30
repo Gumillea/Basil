@@ -1,6 +1,7 @@
 package com.gumillea.basil.common.block;
 
 import com.gumillea.basil.core.reg.BasilItems;
+import com.gumillea.basil.core.reg.data.tags.BasilBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -21,7 +22,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class VegetableFernsBlock extends BushBlock implements BonemealableBlock {
     public static final int MAX_AGE = 4;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_4;
-
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
             Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0),
             Block.box(0.0, 0.0, 0.0, 16.0, 7.0, 16.0),
@@ -29,18 +29,21 @@ public class VegetableFernsBlock extends BushBlock implements BonemealableBlock 
             Block.box(0.0, 0.0, 0.0, 16.0, 13.0, 16.0),
             Block.box(0.0, 0.0, 0.0, 16.0, 4.0, 16.0)};
 
-    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
-        return SHAPE_BY_AGE[(Integer)state.getValue(this.getAgeProperty())];
+    public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
+        return SHAPE_BY_AGE[state.getValue(this.getAgeProperty())];
     }
 
     public IntegerProperty getAgeProperty() {
         return AGE;
     }
 
-
     public VegetableFernsBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+    }
+
+    protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
+        return state.is(BasilBlockTags.FERN_CROPS_GROWABLE);
     }
 
     public ItemStack getCloneItemStack(BlockGetter getter, BlockPos pos, BlockState state) {
@@ -62,8 +65,8 @@ public class VegetableFernsBlock extends BushBlock implements BonemealableBlock 
         }
     }
 
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_57282_) {
-        p_57282_.add(AGE);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(AGE);
     }
 
     public boolean isValidBonemealTarget(BlockGetter getter, BlockPos pos, BlockState state, boolean b) {

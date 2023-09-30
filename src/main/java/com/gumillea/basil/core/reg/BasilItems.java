@@ -2,6 +2,8 @@ package com.gumillea.basil.core.reg;
 
 import com.gumillea.basil.Basil;
 import com.gumillea.basil.common.Item.BasilFoodProperties;
+import com.gumillea.basil.common.Item.DrinkItem;
+import com.gumillea.basil.core.reg.data.compat.ModCompat;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,10 +28,16 @@ public class BasilItems {
             .tab(CreativeModeTab.TAB_FOOD)));
     public static final RegistryObject<Item> FERN_CREAM_SOUP = ITEMS.register("fern_cream_soup", () -> new BowlFoodItem(new Item.Properties()
             .food(BasilFoodProperties.FERN_CREAM_SOUP)
-            .stacksTo(1)
+            .stacksTo(ModCompat.DF_STEW)
             .tab(CreativeModeTab.TAB_FOOD)));
 
     //Crops
     public static final RegistryObject<Item> FERN_SPORANGIA = ITEMS.register("fern_sporangia", () -> new ItemNameBlockItem(BasilBlocks.VEGETABLE_FERNS.get(),new Item.Properties()
             .tab(CreativeModeTab.TAB_MISC)));
+
+    //Compat Item
+    public static final RegistryObject<Item> ARBUTUS_BERRY_JUICE = ITEMS.register("arbutus_berry_juice", () -> new DrinkItem(new Item.Properties()
+            .food(BasilFoodProperties.ARBUTUS_BERRY_JUICE)
+            .stacksTo(16)
+            .tab(ModCompat.DF_ITEM)));
 }

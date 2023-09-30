@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:farmland",
+    "minecraft:clay",
+    "#forge:cobblestone",
+    "#minecraft:dirt",
+    "#minecraft:logs",
+    "#minecraft:planks",
+    "#minecraft:base_stone_overworld"
+  ]
+}
