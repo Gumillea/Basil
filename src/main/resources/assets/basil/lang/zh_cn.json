@@ -1,0 +1,14 @@
+{
+  "block.basil.vegetable_ferns": "菜蕨",
+
+  "effect.basil.phototaxis": "趋光性",
+  "effect.basil.phototaxis.description": "根据持有者所处位置的光照等级提升其攻击速度与挖掘速度",
+
+  "item.basil.arbutus_berries": "杜鹃莓",
+  "item.basil.golden_arbutus_berries": "金杜鹃莓",
+
+  "item.basil.fern_sporangia": "蕨类孢子囊",
+  "item.basil.fiddlehead": "蕨芽",
+  "item.basil.cooked_fiddlehead": "熟蕨芽",
+  "item.basil.fern_cream_soup": "奶油蕨菜汤"
+}

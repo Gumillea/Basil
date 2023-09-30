@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:ingots/gold"
+    },
+    "B": {
+      "item": "basil:arbutus_berries"
+    }
+  },
+  "result": {
+    "item": "basil:golden_arbutus_berries"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "basil:cooked_fiddlehead"
+    },
+    {
+      "item": "basil:cooked_fiddlehead"
+    },
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "basil:fern_cream_soup"
+  }
+}

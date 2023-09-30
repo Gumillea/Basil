@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/coral_fan",
+  "render_type": "cutout",
+  "textures": {
+    "fan": "basil:block/vegetable_ferns_stage4"
+  }
+}

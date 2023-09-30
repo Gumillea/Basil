@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+[[mods]]
+modId="basil"
+version="0.0.1"
+displayName="Basil"
+logoFile="icon.png"
+authors="Gumillea"
+description='''
+An addon mod for Neapolitan, designed to enhance diet diversity and mod compatibility by adding new foods with unique effects from the End.
+'''
+[[dependencies.basil]]
+modId="forge"
+mandatory=true
+versionRange="[43,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.basil]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19.2,1.20)"
+ordering="NONE"
+side="BOTH"

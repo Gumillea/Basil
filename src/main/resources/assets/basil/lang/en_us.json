@@ -1,0 +1,14 @@
+{
+  "block.basil.vegetable_ferns": "Vegetable Ferns",
+
+  "effect.basil.phototaxis": "Phototaxis",
+  "effect.basil.phototaxis.description": "Increases attack speed and mining speed based on the light level that user is in.",
+
+  "item.basil.arbutus_berries": "Arbutus Berries",
+  "item.basil.golden_arbutus_berries": "Golden Arbutus Berries",
+
+  "item.basil.fern_sporangia": "Fern Sporangia",
+  "item.basil.fiddlehead": "Fiddlehead",
+  "item.basil.cooked_fiddlehead": "Cooked Fiddlehead",
+  "item.basil.fern_cream_soup": "Cream Of Fern Soup"
+}
