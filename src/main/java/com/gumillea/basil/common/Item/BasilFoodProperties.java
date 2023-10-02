@@ -1,8 +1,7 @@
 package com.gumillea.basil.common.Item;
 
 import com.gumillea.basil.core.reg.BasilEffects;
-import com.gumillea.basil.core.reg.data.compat.ModCompat;
-import net.minecraft.world.effect.MobEffect;
+import com.gumillea.basil.core.data.compat.ModCompat;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;

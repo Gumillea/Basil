@@ -1,7 +1,7 @@
 package com.gumillea.basil.common.block;
 
+import com.gumillea.basil.core.data.tags.BasilBlockTags;
 import com.gumillea.basil.core.reg.BasilItems;
-import com.gumillea.basil.core.reg.data.tags.BasilBlockTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -39,7 +39,7 @@ public class VegetableFernsBlock extends BushBlock implements BonemealableBlock 
 
     public VegetableFernsBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, Integer.valueOf(0)));
+        this.registerDefaultState(this.stateDefinition.any().setValue(AGE, 0));
     }
 
     protected boolean mayPlaceOn(BlockState state, BlockGetter getter, BlockPos pos) {
@@ -51,14 +51,14 @@ public class VegetableFernsBlock extends BushBlock implements BonemealableBlock 
     }
 
     public boolean isRandomlyTicking(BlockState state) {
-        return state.getValue(AGE) < 4;
+        return state.getValue(AGE) < MAX_AGE;
     }
 
     public void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource source) {
         int i = state.getValue(AGE);
-        if (i < MAX_AGE && level.getRawBrightness(pos.above(), 0) >= 6
+        if (i < MAX_AGE && level.getRawBrightness(pos.above(), 0) >= 7
                 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(level, pos, state, source.nextInt(5) == 0)) {
-            BlockState blockstate = state.setValue(AGE, Integer.valueOf(i + 1));
+            BlockState blockstate = state.setValue(AGE, i + 1);
             level.setBlock(pos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(blockstate));
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(level, pos, state);
@@ -79,6 +79,6 @@ public class VegetableFernsBlock extends BushBlock implements BonemealableBlock 
 
     public void performBonemeal(ServerLevel level, RandomSource source, BlockPos pos, BlockState state) {
         int i = Math.min(4, state.getValue(AGE) + 1);
-        level.setBlock(pos, state.setValue(AGE, Integer.valueOf(i)), 2);
+        level.setBlock(pos, state.setValue(AGE, i), 2);
     }
 }

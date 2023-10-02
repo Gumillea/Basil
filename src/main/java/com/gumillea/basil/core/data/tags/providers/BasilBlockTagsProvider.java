@@ -1,14 +1,10 @@
-package com.gumillea.basil.core.reg.data.tags.providers;
+package com.gumillea.basil.core.data.tags.providers;
 
 import com.gumillea.basil.Basil;
-import com.gumillea.basil.core.reg.BasilItems;
-import com.gumillea.basil.core.reg.data.tags.BasilBlockTags;
-import com.gumillea.basil.core.reg.data.tags.BasilItemTags;
+import com.gumillea.basil.core.data.tags.BasilBlockTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

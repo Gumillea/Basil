@@ -3,7 +3,7 @@ package com.gumillea.basil.core.reg;
 import com.gumillea.basil.Basil;
 import com.gumillea.basil.common.Item.BasilFoodProperties;
 import com.gumillea.basil.common.Item.DrinkItem;
-import com.gumillea.basil.core.reg.data.compat.ModCompat;
+import com.gumillea.basil.core.data.compat.ModCompat;
 import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

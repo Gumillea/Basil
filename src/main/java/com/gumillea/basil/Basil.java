@@ -1,11 +1,12 @@
 package com.gumillea.basil;
 
+import com.gumillea.basil.core.loot.BasilLootModifiers;
 import com.gumillea.basil.core.reg.BasilBlocks;
 import com.gumillea.basil.core.reg.BasilEffects;
 import com.gumillea.basil.core.reg.BasilItems;
-import com.gumillea.basil.core.reg.data.BasilCompostableItems;
-import com.gumillea.basil.core.reg.data.tags.providers.BasilBlockTagsProvider;
-import com.gumillea.basil.core.reg.data.tags.providers.BasilItemTagsProvider;
+import com.gumillea.basil.core.data.BasilCompostableItems;
+import com.gumillea.basil.core.data.tags.providers.BasilBlockTagsProvider;
+import com.gumillea.basil.core.data.tags.providers.BasilItemTagsProvider;
 import com.mojang.logging.LogUtils;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +34,7 @@ public class Basil {
         BasilItems.ITEMS.register(modEventBus);
         BasilBlocks.BLOCKS.register(modEventBus);
         BasilEffects.EFFECTS.register(modEventBus);
+        BasilLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }

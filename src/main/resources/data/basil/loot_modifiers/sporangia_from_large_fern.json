@@ -1,0 +1,10 @@
+{
+  "type": "basil:add_seeds_item",
+  "item": "basil:fern_sporangia",
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block": "minecraft:large_fern"
+    }
+  ]
+}

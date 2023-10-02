@@ -1,4 +1,4 @@
-package com.gumillea.basil.core.reg.data;
+package com.gumillea.basil.core.data;
 
 import com.gumillea.basil.core.reg.BasilItems;
 import net.minecraft.world.item.Item;

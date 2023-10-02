@@ -1,4 +1,4 @@
-package com.gumillea.basil.core.reg.data.compat;
+package com.gumillea.basil.core.data.compat;
 
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.CreativeModeTab;
