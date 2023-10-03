@@ -45,4 +45,9 @@ public class BasilFoodProperties {
             .saturationMod(0.6F)
             .effect(() -> new MobEffectInstance(Objects.requireNonNull(ModCompat.COMFORT).get(), 3600), 1.0F)
             .build();
+    public static final FoodProperties CREAM_STEW = (new FoodProperties.Builder())
+            .nutrition(12)
+            .saturationMod(1.5F)
+            .effect(() -> new MobEffectInstance(Objects.requireNonNull(ModCompat.NOURISHMENT).get(), 3600), 1.0F)
+            .build();
 }

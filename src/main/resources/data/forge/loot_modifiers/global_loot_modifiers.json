@@ -1,6 +1,8 @@
 {
   "replace": false,
   "entries": [
+    "basil:arbutus_berries_from_azalea_leaves",
+    "basil:arbutus_berries_from_flowering_azalea_leaves",
     "basil:sporangia_from_fern",
     "basil:sporangia_from_large_fern"
   ]

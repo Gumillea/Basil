@@ -3,6 +3,7 @@ package com.gumillea.basil.common.effect;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.*;
 import net.minecraft.world.level.LevelAccessor;
@@ -20,8 +21,15 @@ public class PhototaxisEffect extends MobEffect {
         if (!entity.level.isClientSide) {
             BlockPos pos = new BlockPos(entity.getX(), entity.getY(), entity.getZ());
             LevelAccessor world = entity.level;
-            int light = world.getRawBrightness(pos, world.getSkyDarken());
-            float amount = light * (amplifier + 1) * 0.5F;
+            int light = world.getRawBrightness(pos, world.getSkyDarken()) + 1;
+            float amount;
+
+            if (entity.hasEffect(MobEffects.GLOWING)){
+                amount = (amplifier + 1) * 8F;
+            } else {
+                amount = light * (amplifier + 1) * 0.5F;
+            }
+
             for (Map.Entry<Attribute, AttributeModifier> entry : this.getAttributeModifiers().entrySet()) {
                 AttributeInstance instance = map.getInstance(entry.getKey());
                 if (instance != null) {
@@ -33,6 +41,7 @@ public class PhototaxisEffect extends MobEffect {
                             modifier.getOperation()));
                 }
             }
+
         }
     }
 

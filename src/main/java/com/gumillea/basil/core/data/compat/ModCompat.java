@@ -13,6 +13,7 @@ public class ModCompat {
 
     //Effect
     public static Supplier<MobEffect> COMFORT = ((ModList.get().isLoaded(FD)) ? ModEffects.COMFORT : null);
+    public static Supplier<MobEffect> NOURISHMENT = ((ModList.get().isLoaded(FD)) ? ModEffects.NOURISHMENT : null);
 
     //Stack
     public static int DF_STEW = ((ModList.get().isLoaded(FD)) ? 16 : 1);

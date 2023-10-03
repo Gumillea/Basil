@@ -13,5 +13,6 @@ public class BasilLootModifiers {
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_SEEDS_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("add_seeds_item", SeedsItemModifier.CODEC);
-
+    public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_FRUIT_ITEM =
+            LOOT_MODIFIER_SERIALIZERS.register("add_fruit_item", FruitItemModifier.CODEC);
 }

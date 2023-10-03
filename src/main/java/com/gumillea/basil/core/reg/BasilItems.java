@@ -29,6 +29,7 @@ public class BasilItems {
     public static final RegistryObject<Item> FERN_CREAM_SOUP = ITEMS.register("fern_cream_soup", () -> new BowlFoodItem(new Item.Properties()
             .food(BasilFoodProperties.FERN_CREAM_SOUP)
             .stacksTo(ModCompat.DF_STEW)
+            .craftRemainder(Items.BOWL)
             .tab(CreativeModeTab.TAB_FOOD)));
 
     //Crops
@@ -39,5 +40,10 @@ public class BasilItems {
     public static final RegistryObject<Item> ARBUTUS_BERRY_JUICE = ITEMS.register("arbutus_berry_juice", () -> new DrinkItem(new Item.Properties()
             .food(BasilFoodProperties.ARBUTUS_BERRY_JUICE)
             .stacksTo(16)
+            .tab(ModCompat.DF_ITEM)));
+    public static final RegistryObject<Item> CREAM_STEW = ITEMS.register("cream_stew", () -> new BowlFoodItem(new Item.Properties()
+            .food(BasilFoodProperties.CREAM_STEW)
+            .stacksTo(16)
+            .craftRemainder(Items.BOWL)
             .tab(ModCompat.DF_ITEM)));
 }
